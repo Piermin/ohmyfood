@@ -6,6 +6,7 @@
 
 body{
     margin: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
 header{
@@ -13,9 +14,21 @@ header{
     text-align: center;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
     padding: 0.3rem;
+    position: relative;
 }
 
-header > h1
-{
+header > h1{
     margin: 5px;
+}
+
+main .city{
+    background-color: #f3f3f3 ;
+    padding: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.city > p{
+    margin: 12px;
 }
