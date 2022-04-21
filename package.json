@@ -1,0 +1,22 @@
+{
+  "name": "projet-3---oh-my-food",
+  "version": "1.0.0",
+  "description": "Projet 3 Openclassrooms ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Piermin/ohmyfood.git"
+  },
+  "author": "Piermin Baliteau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Piermin/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Piermin/ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.50.1"
+  }
+}
