@@ -22,7 +22,7 @@ header > h1{
 }
 
 main .city{
-    background-color: #f3f3f3 ;
+    background-color: #e3e3e3;
     padding: 0.1rem;
     display: flex;
     align-items: center;
@@ -31,4 +31,35 @@ main .city{
 
 .city > p{
     margin: 12px;
+}
+
+/* EXPLORER */
+
+.explorer{
+   text-align: center;
+   padding: 0.5rem 0.5rem 3rem;
+   background-color: #f3f3f3;
+}
+
+.explorer p{
+    margin-bottom: 2rem;
+}
+
+.explorer button{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    padding: 1em 1.5em 1em;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 2px 6px 16px -10px #000000;
+    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9)) ;
+    transition: all 200ms;
+}
+
+.explorer button:hover{
+    transform: scale(1.02) ;
+    opacity: 0.9;
+    box-shadow: 2px 6px 16px -4px #000000;
 }
