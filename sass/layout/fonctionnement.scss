@@ -1,0 +1,48 @@
+@use "../utils/box-shadow";
+@use "../utils/zoom";
+@use "..//utils/variables";
+@use "..//utils/colors";
+
+.fonctionnement{
+    counter-reset: étapes;
+    padding: 1rem;
+    & ol{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-left: 1rem;
+        list-style-type: none;
+    }
+    & li{
+        position: relative;
+        &::before{
+            content: counter(étapes);
+            counter-increment: étapes;
+            background-color: colors.$primary;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2* variables.$height-étapes-fonctionnement;
+            height: 2* variables.$height-étapes-fonctionnement;
+            border-radius: 50%;
+            position: absolute;
+            bottom: variables.$height-étapes-fonctionnement;
+            left: -1 * variables.$height-étapes-fonctionnement;
+        }
+        background-color: #f3f3f3;
+        padding: 1.5rem 2rem;
+        border: none;
+        flex-grow: 1;
+        border-radius: 1.2rem;
+        font-weight: 500;
+        @include box-shadow.shadow;
+        &:hover {
+            @include zoom.transform-zoom;
+        }
+        & i.fas{
+            margin-right: 1rem;
+            color: lightslategray;
+        }
+    }
+}
