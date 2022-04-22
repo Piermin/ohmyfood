@@ -9,6 +9,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -100,6 +105,44 @@ header > h1 {
 .fonctionnement li i.fas {
   margin-right: 1rem;
   color: lightslategray;
+}
+
+.menus {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #f3f3f3;
+  padding: 1rem;
+}
+.menus h2 {
+  margin-bottom: 0;
+}
+.menus .menus__cards {
+  gap: 2rem;
+  background-color: white;
+  border-radius: 2rem;
+}
+.menus .menus__cards h3, .menus .menus__cards p {
+  padding-left: 1rem;
+}
+.menus .menus__cards h3 {
+  margin: 0.7rem auto 0.5rem;
+}
+.menus .menus__cards p {
+  margin-top: 0;
+}
+.menus .menus__cards .new {
+  position: relative;
+}
+.menus .card {
+  flex-grow: 1;
+}
+.menus .card img {
+  border-radius: 2rem 2rem 0 0;
+  height: 170px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /*# sourceMappingURL=style.css.map */

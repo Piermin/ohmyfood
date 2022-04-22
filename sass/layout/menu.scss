@@ -1,0 +1,40 @@
+@use "..//utils/colors";
+
+.menus{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: colors.$lightgrey;
+    padding: 1rem;
+    & h2{
+        margin-bottom: 0;
+    }
+    & .menus__cards{
+        gap: 2rem;
+        background-color: white;
+        border-radius: 2rem ;
+        & h3,p{
+            padding-left: 1rem;
+        }
+        & h3{
+            margin: 0.7rem auto 0.5rem;
+        }
+        & p{
+            margin-top: 0;
+        }
+        & .new{
+            position: relative;
+        }
+    }
+    & .card{
+        flex-grow: 1;
+    &  img{
+            border-radius: 2rem 2rem 0 0;
+            height: 170px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        } 
+    }
+}
+
