@@ -11,7 +11,7 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 header {
@@ -112,10 +112,10 @@ header > h1 {
   flex-direction: column;
   gap: 2rem;
   background-color: #f3f3f3;
-  padding: 1rem;
+  padding: 2rem 1rem 5rem;
 }
 .menus h2 {
-  margin-bottom: 0;
+  margin: 0;
 }
 .menus .menus__cards {
   gap: 2rem;
@@ -137,12 +137,57 @@ header > h1 {
 .menus .card {
   flex-grow: 1;
 }
+.menus .card__description {
+  position: relative;
+}
+.menus .card__description i {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 84%;
+}
+.menus .card__description span {
+  position: absolute;
+  background-color: #99E2D0;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+  right: 1rem;
+  top: 1rem;
+}
+.menus .card__description__heart .fas {
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+.menus .card__description__heart:hover .fas {
+  opacity: 1;
+  transform: scale(1.1);
+}
 .menus .card img {
   border-radius: 2rem 2rem 0 0;
   height: 170px;
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+footer {
+  background-color: #353535;
+  padding: 0.5rem 2rem 1.5rem;
+  color: white;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+}
+footer p {
+  margin: 0.5rem 0 0.5rem;
+}
+footer .fa-solid {
+  padding-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+footer{
+    background-color: #353535;
+    padding: 0.5rem 2rem 1.5rem;
+    color: white;
+    h2 {
+        font-family: 'Shrikhand', cursive;
+        font-weight: 400;
+    }
+    p{
+        margin: 0.5rem 0 0.5rem;
+    }
+        & .fa-solid{
+            padding-right: 10px;
+        }
+}
