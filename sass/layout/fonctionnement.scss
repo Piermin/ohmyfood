@@ -1,5 +1,4 @@
-@use "../utils/box-shadow";
-@use "../utils/zoom";
+@use "../utils/mixins";
 @use "..//utils/variables";
 @use "..//utils/colors";
 
@@ -15,6 +14,7 @@
     }
     & li{
         position: relative;
+        transition: all 200ms;
         &::before{
             content: counter(étapes);
             counter-increment: étapes;
@@ -36,9 +36,9 @@
         flex-grow: 1;
         border-radius: 1.2rem;
         font-weight: 500;
-        @include box-shadow.shadow;
+        @include mixins.shadow;
         &:hover {
-            @include zoom.transform-zoom;
+            @include mixins.transform-zoom;
         }
         & i.fas{
             margin-right: 1rem;
