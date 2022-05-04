@@ -13,3 +13,9 @@ footer{
             padding-right: 10px;
         }
 }
+
+@media (min-width:992px){
+    footer{
+        padding-left: 5rem;
+    }
+}

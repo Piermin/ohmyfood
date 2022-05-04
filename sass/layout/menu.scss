@@ -1,12 +1,19 @@
 @use "..//utils/colors";
 @use "../utils/mixins";
 
+.title-menus{
+    padding: 1rem;
+    background-color: colors.$lightgrey;
+    & h2{
+        margin: 0;
+    }
+}
 .menus{
     display: flex;
     flex-direction: column;
     gap: 2rem;
     background-color: colors.$lightgrey;
-    padding:2rem 1rem 5rem;
+    padding:1rem 1rem 5rem;
     & h2{
         margin : 0;
     }
@@ -72,3 +79,29 @@
     }
 }
 
+@media (min-width:768px){
+    .menus{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }    
+}
+@media (min-width:992px){
+    .menus{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1rem 5rem 3rem;
+        margin: 0 5rem 2rem;
+        border-radius: 0 0 2rem 2rem;
+        @include mixins.shadow;
+        & .card img{
+            height: 300px;
+        }
+    }
+    .title-menus{
+        padding-left: 5rem;
+        margin: 0 5rem;
+        border-radius: 2rem 2rem 0 0;
+        @include mixins.shadow;
+    }
+
+}

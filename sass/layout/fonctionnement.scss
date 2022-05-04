@@ -11,6 +11,14 @@
         gap: 1.5rem;
         padding-left: 1rem;
         list-style-type: none;
+        & .purple li{
+            display: flex;
+            background-color: lighten($color: colors.$primary, $amount: 33%);
+            & i.fas{
+                margin-right: 1rem;
+                color: colors.$primary;
+            }
+        }
     }
     & li{
         position: relative;
@@ -45,4 +53,27 @@
             color: lightslategray;
         }
     }
+}
+
+@media (min-width:768px){
+    .fonctionnement{
+        & ol {
+        flex-direction: row;
+            & li{
+                padding: 1.3rem;
+            }
+    }
+}
+}
+
+@media (min-width:992px){
+        .fonctionnement{
+            & h2{
+                padding-left: 5rem;
+            }
+            & ol{
+                flex-direction: row;
+                padding: 1rem 5rem;
+            }   
+        }   
 }

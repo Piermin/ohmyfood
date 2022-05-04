@@ -12,3 +12,11 @@
         @include mixins.base-button;
     }
  }
+
+ @media (min-width:992px){
+     .explorer{
+         margin: 0 5rem;
+         border-radius: 0 0 2rem 2rem;
+         @include mixins.shadow;
+     }
+ }
