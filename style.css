@@ -65,7 +65,7 @@ header > h1 {
     transform: rotate(0);
   }
   100% {
-    transform: rotate(360);
+    transform: rotate(360deg);
   }
 }
 .explorer {
@@ -139,10 +139,10 @@ header > h1 {
   padding-left: 1rem;
   list-style-type: none;
 }
-.fonctionnement ol .purple li {
+.fonctionnement ol .purple {
   background-color: #ece1f9;
 }
-.fonctionnement ol .purple li i.fas {
+.fonctionnement ol .purple i.fas {
   margin-right: 1rem;
   color: #9356DC;
 }

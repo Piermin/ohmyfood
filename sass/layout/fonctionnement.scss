@@ -11,7 +11,7 @@
         gap: 1.5rem;
         padding-left: 1rem;
         list-style-type: none;
-        & .purple li{
+        & .purple{
             background-color: lighten($color: colors.$primary, $amount: 33%);
             & i.fas{
                 margin-right: 1rem;
