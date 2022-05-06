@@ -42,6 +42,32 @@ header > h1 {
     margin: 0 5rem;
   }
 }
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360);
+  }
+}
 .explorer {
   text-align: center;
   padding: 0.5rem 0.5rem 3rem;
@@ -69,6 +95,32 @@ header > h1 {
   box-shadow: 2px 6px 16px -10px rgb(187, 185, 185);
 }
 
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.8;
+  animation: fade 200ms forwards;
+  animation-delay: 3s;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-bottom: 5px solid #FF79DA;
+  border-top: 5px solid #9356DC;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1.5s infinite ease-in-out;
+}
+
 @media (min-width: 992px) {
   .explorer {
     margin: 0 5rem;
@@ -88,7 +140,6 @@ header > h1 {
   list-style-type: none;
 }
 .fonctionnement ol .purple li {
-  display: flex;
   background-color: #ece1f9;
 }
 .fonctionnement ol .purple li i.fas {
@@ -145,6 +196,10 @@ header > h1 {
     flex-direction: row;
     padding: 1rem 5rem;
   }
+
+  .purple {
+    flex-basis: 32%;
+  }
 }
 .title-menus {
   padding: 1rem;
@@ -164,23 +219,27 @@ header > h1 {
 .menus h2 {
   margin: 0;
 }
-.menus .menus__cards {
+.menus__cards {
   gap: 2rem;
   background-color: white;
   border-radius: 2rem;
   box-shadow: 2px 6px 16px -10px rgb(187, 185, 185);
+  transition: all 200ms;
 }
-.menus .menus__cards h3, .menus .menus__cards p {
+.menus__cards h3, .menus__cards p {
   padding-left: 1rem;
 }
-.menus .menus__cards h3 {
+.menus__cards h3 {
   margin: 0.7rem auto 0.5rem;
 }
-.menus .menus__cards p {
+.menus__cards p {
   margin-top: 0;
 }
-.menus .menus__cards .new {
+.menus__cards .new {
   position: relative;
+}
+.menus__cards:hover {
+  transform: scale(1.02);
 }
 .menus .card {
   flex-grow: 1;
@@ -331,7 +390,7 @@ footer .fa-solid {
 }
 .resto-main h3 {
   padding: 0;
-  margin: 1.5rem 0 0.7rem;
+  margin: 1.5rem 0 1.5rem;
   font-weight: 400;
   position: relative;
 }
@@ -351,12 +410,12 @@ footer .fa-solid {
   gap: 1rem;
 }
 .menu__category {
-  border-radius: 1rem;
-  background: white;
-  box-shadow: 2px 6px 16px -10px rgb(187, 185, 185);
   overflow: hidden;
 }
 .menu__category .menu-item {
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 2px 6px 16px -10px rgb(187, 185, 185);
   display: flex;
   overflow: hidden;
   border-radius: 1rem;
@@ -402,6 +461,30 @@ footer .fa-solid {
   100% {
     transform: rotate(0);
   }
+}
+
+.menu-1 {
+  animation: appear 2s;
+  animation-delay: 200ms;
+  animation-fill-mode: both;
+}
+
+.menu-2 {
+  animation: appear 2s;
+  animation-delay: 700ms;
+  animation-fill-mode: both;
+}
+
+.menu-3 {
+  animation: appear 2s;
+  animation-delay: 1200ms;
+  animation-fill-mode: both;
+}
+
+.menu-4 {
+  animation: appear 2s;
+  animation-delay: 400ms;
+  animation-fill-mode: both;
 }
 
 section.order {

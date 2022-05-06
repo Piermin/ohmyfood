@@ -12,7 +12,6 @@
         padding-left: 1rem;
         list-style-type: none;
         & .purple li{
-            display: flex;
             background-color: lighten($color: colors.$primary, $amount: 33%);
             & i.fas{
                 margin-right: 1rem;
@@ -75,5 +74,8 @@
                 flex-direction: row;
                 padding: 1rem 5rem;
             }   
-        }   
+        } 
+        .purple{
+            flex-basis: 32%;
+        }  
 }

@@ -17,11 +17,12 @@
     & h2{
         margin : 0;
     }
-    & .menus__cards{
+    &__cards{
         gap: 2rem;
         background-color: white;
         border-radius: 2rem ;
         @include mixins.shadow;
+        transition: all 200ms;
         & h3,p{
             padding-left: 1rem;
         }
@@ -33,6 +34,9 @@
         }
         & .new{
             position: relative;
+        }
+        &:hover {
+            @include mixins.transform-zoom;
         }
     }
     & .card{
