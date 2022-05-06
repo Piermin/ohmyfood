@@ -196,10 +196,6 @@ header > h1 {
     flex-direction: row;
     padding: 1rem 5rem;
   }
-
-  .purple {
-    flex-basis: 32%;
-  }
 }
 .title-menus {
   padding: 1rem;
